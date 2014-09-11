@@ -1,0 +1,75 @@
+/*
+Base Styles
+===
+ */
+
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+Layout Modules
+===
+ */
+
+/*
+Table (.table)
+---
+ */
+.table {
+    display: table;
+    width: 100%;
+}
+
+.table_bordered .table-cell + .table-cell {
+    border-left: 1px solid #999999;
+}
+
+.mix-table_fullHeight {
+    height: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.mix-table-cell_1of4 {
+    width: 25%;
+}
+
+
+/*
+Content
+===
+ */
+
+/*
+Email (.email)
+ */
+.email_isActive {
+    background: #000000;
+    color: #ffffff;
+}
+
+
+/*
+Utility Classes
+===
+ */
+
+.isVisuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
