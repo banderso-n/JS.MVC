@@ -18,6 +18,19 @@ body {
 
 
 /**
+ * Landmarks
+ * ===
+ */
+
+/**
+ * Main (.main)
+ */
+.main {
+    padding: 50px;
+}
+
+
+/**
  * Layout Modules
  * ===
  */
@@ -42,6 +55,7 @@ body {
 
 .table-cell {
     display: table-cell;
+    vertical-align: top;
 }
 
 .table-cell_shadowed {
@@ -80,6 +94,9 @@ body {
  */
 .vr_1x { margin-bottom: 5px; }
 .vr_2x { margin-bottom: 10px; }
+.vr_3x { margin-bottom: 15px; }
+.vr_4x { margin-bottom: 20px; }
+.vr_5x { margin-bottom: 25px; }
 
 
 /**
@@ -94,6 +111,36 @@ body {
 
 .vList_lined > * + * {
     border-top: 1px solid #eeeeee;
+}
+
+
+/**
+ * Definition List (.dList)
+ * ---
+ */
+.dList {
+}
+
+.dList-term {
+    float: left;
+    margin-right: 5px;
+}
+
+.dList-definition {
+    overflow: hidden;
+}
+
+
+/**
+ * Copy (.copy)
+ * ---
+ */
+.copy > p {
+    margin-top: 10px;
+}
+
+.copy > p:first-child {
+    margin-top: 0;
 }
 
 
@@ -165,11 +212,19 @@ body {
 .txt_xs { font-size: 12px; }
 .txt_s { font-size: 14px; }
 .txt_m { font-size: 16px; }
-.txt_l { font-size: 18px; }
-.txt_lg { font-size: 22px; }
+.txt_l { font-size: 20px; }
+.txt_xl { font-size: 24px; }
+.txt_xxl { font-size: 30px; }
 
+.mix-txt_light {font-weight: 300; }
 .mix-txt_bold { font-weight: bold; }
 .mix-txt_italic { font-weight: bold; }
+
+.mix-txt_grey8of16 { color: #777777; }
+.mix-txt_grey10of16 { color: #999999; }
+.mix-txt_grey12of16 { color: #bbbbbb; }
+
+.mix-txt_vr_l { line-height: 1.3; }
 
 
 /**
