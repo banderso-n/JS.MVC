@@ -157,12 +157,14 @@ body {
     background-color: transparent;
     cursor: pointer;
     padding: 10px;
-    transition: background-color 100ms, color 100ms;
+    transition: background-color 100ms, color 100ms, padding 100ms ease-out;
 }
 
 .email_isActive {
     background: #15c4ea;
     color: #ffffff;
+    padding-left: 15px;
+    padding-right: 5px;
 }
 
 .email-hd {
