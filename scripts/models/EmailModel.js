@@ -14,8 +14,6 @@ define(function (require) {
 
         this.sentDate = new Date();
 
-        this.to = '';
-
     }
 
 
@@ -25,7 +23,6 @@ define(function (require) {
         this.message = json.message;
         this.subject = json.subject;
         this.sentDate = new Date(json.sent);
-        this.to = json.to;
 
         return this;
     };
