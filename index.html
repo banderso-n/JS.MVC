@@ -13,23 +13,44 @@
 </head>
 <body>
 
-<div class="table table_bordered mix-table_fullHeight">
-    <div class="js-emailList table-cell mix-table-cell_1of4">
-        <form>
-            <label class="isVisuallyHidden">Search your emails</label>
-            <input type="search" name="query" placeholder="Search" />
-            <button type="submit">
-                <span class="icon icon_search">Search</span>
-            </button>
-        </form>
-        <ol>
-            <li class="js-emailList-email">
-                <h1>Re: Hello</h1>
-            </li>
-            <li class="js-emailList-email">
-                <h1>Tomorrow</h1>
-            </li>
-        </ol>
+<div class="table mix-table_fullHeight mix-table_fixed">
+    <div class="js-emailList table-cell table-cell_shadowed mix-table-cell_1of4">
+        <div class="table mix-table_fullHeight">
+            <div class="table-row">
+                <form class="vr_2x">
+                    <label class="isVisuallyHidden">Search your emails</label>
+                    <input type="search" class="input" name="query" placeholder="Search" autocomplete="off" />
+                </form>
+            </div>
+            <div class="table-row mix-table-row_fillRemaining">
+                <div class="table-positioner">
+                    <div class="table-scrollable">
+                        <ol class="vList vList_lined">
+                            <li>
+                                <div class="js-emailList-email email">
+                                    <div class="email-hd">
+                                        <h1 class="email-heading">Re: Hello</h1>
+                                    </div>
+                                    <div class="email-bd">
+                                        <p class="email-teaser">Lorem ipsum Amet Duis aliqua incididunt dolor incididunt Ut culpa aliquip amet eiusmod aliqua aliqua irure consectetur proident Duis id ut.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="js-emailList-email email">
+                                    <div class="email-hd">
+                                        <h1 class="email-heading">Tomorrow and tomorrow and tomorrow</h1>
+                                    </div>
+                                    <div class="email-bd">
+                                        <p class="email-teaser">Lorem ipsum Amet Duis aliqua incididunt dolor incididunt Ut culpa aliquip amet eiusmod aliqua aliqua irure consectetur proident Duis id ut.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="table-cell">
         <h1>Re: Hello</h1>

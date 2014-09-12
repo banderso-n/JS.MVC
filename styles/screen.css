@@ -1,34 +1,39 @@
-/*
-Base Styles
-===
+/**
+ * Base Styles
+ * ===
  */
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
     height: 100%;
 }
 
-* {
-    box-sizing: border-box;
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
-/*
-Layout Modules
-===
+/**
+ * Layout Modules
+ * ===
  */
 
-/*
-Table (.table)
----
+/**
+ * Table (.table)
+ * ---
  */
 .table {
     display: table;
+    table-layout: fixed;
     width: 100%;
 }
 
-.table_bordered .table-cell + .table-cell {
-    border-left: 1px solid #999999;
+.mix-table_fixed {
+    table-layout: fixed;
 }
 
 .mix-table_fullHeight {
@@ -39,28 +44,137 @@ Table (.table)
     display: table-cell;
 }
 
+.table-cell_shadowed {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .mix-table-cell_1of4 {
     width: 25%;
 }
 
+.table-row {
+    display: table-row;
+}
 
-/*
-Content
-===
- */
+.mix-table-row_fillRemaining {
+    height: 100%;
+}
 
-/*
-Email (.email)
- */
-.email_isActive {
-    background: #000000;
-    color: #ffffff;
+.table-positioner {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.table-scrollable {
+    height: 100%;
+    overflow: scroll;
+    position: absolute;
+    width: 100%;
 }
 
 
-/*
-Utility Classes
-===
+/**
+ * Vertical Rhythm (.vr)
+ * ---
+ */
+.vr_1x { margin-bottom: 5px; }
+.vr_2x { margin-bottom: 10px; }
+
+
+/**
+ * Container
+ * ===
+ */
+
+/**
+ * Vertical List (.vList)
+ * ---
+ */
+
+.vList_lined > * + * {
+    border-top: 1px solid #eeeeee;
+}
+
+
+/**
+ * Content
+ * ===
+ */
+
+/**
+ * Email (.email)
+ * ---
+ */
+.email {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 100ms, color 100ms;
+}
+
+.email_isActive {
+    background: #15c4ea;
+    color: #ffffff;
+}
+
+.email-hd {
+    margin-bottom: 4px;
+}
+
+.email-heading {
+    font-size: 16px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.email-teaser {
+    font-size: 14px;
+    opacity: 0.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/**
+ * Input (.input)
+ * ---
+ */
+.input {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+    outline: none;
+    padding: 10px 5px;
+    width: 100%;
+}
+
+
+/**
+ * Text (.txt)
+ * ---
+ */
+.txt_xs { font-size: 12px; }
+.txt_s { font-size: 14px; }
+.txt_m { font-size: 16px; }
+.txt_l { font-size: 18px; }
+.txt_lg { font-size: 22px; }
+
+.mix-txt_bold { font-weight: bold; }
+.mix-txt_italic { font-weight: bold; }
+
+
+/**
+ * Utility Classes
+ * ===
  */
 
 .isVisuallyHidden {
