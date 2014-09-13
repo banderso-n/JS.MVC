@@ -1,8 +1,11 @@
 define(function (require) {
     'use strict';
 
+    var EventEmitter = require('lib/EventEmitter');
+
 
     function EmailListView ($element) {
+        EventEmitter.call(this);
 
         this.$element = $element;
 
@@ -16,6 +19,8 @@ define(function (require) {
 
         this.init();
     }
+    EmailListView.prototype = Object.create(EventEmitter.prototype);
+    EmailListView.prototype.constructor = EmailListView;
 
 
     EmailListView.CLASS_NAME = {
@@ -40,7 +45,7 @@ define(function (require) {
         this.$email.eq(previousIndex).removeClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
         this.$email.eq(this.activeIndex).addClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
 
-        this.$element.trigger(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, { model: this.collection.models[this.activeIndex] });
+        this.emit(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this.collection.models[this.activeIndex]);
 
         return this;
     };

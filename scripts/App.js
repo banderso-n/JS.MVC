@@ -35,7 +35,7 @@ define(function (require) {
 
 
     App.prototype.enable = function () {
-        this.emailListView.$element.on(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this._onEmailActivation);
+        this.emailListView.on(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this._onEmailActivation);
         return this;
     };
 
@@ -45,8 +45,9 @@ define(function (require) {
     };
 
 
-    App.prototype._onEmailActivation = function (e, data) {
-        console.log('Email activated', data.model);
+    App.prototype._onEmailActivation = function (emailModel) {
+        this.emailDetailView.model = emailModel;
+        this.emailDetailView.render();
     };
 
 
