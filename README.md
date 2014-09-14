@@ -45,8 +45,8 @@ Image of finished app with link to live demo.
     0. http://todomvc.com/ (Vanilla)
     0. Give tldr on what methodology we'll be using
         * Show a typical MVC diagram and explain why it's not helpful
-            * Apps rarely ever just have one model, one view, and one controller. How does it work when I have multiple models, maybe even multiple views for a given model, and multiple controllers?
-        * Show a revised diagram illustrating how we'll setup this app
+            * Implies you should have one Model, one View, and one Controller, which easily leads to God objects, components that are difficult to reuse, and does not scale or maintain well.
+        * Show a revised diagram illustrating how we'll setup this app (Ravioli code)
             * A Brain (representing App) pointing to two Views and a Collection. The Collection has Models floating in it. One View points to the Collection and the other View points to a Model floating inside the Collection.
 0. Setting up our MVC architecture
     0. Go over file structure and explain roughly what each file will do
