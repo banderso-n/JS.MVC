@@ -1,0 +1,14 @@
+<ol class="vList vList_lined">
+    {{#each collection.models}}
+        <li>
+            <div class="js-emailList-email email">
+                <div class="email-hd">
+                    <h1 class="email-heading">{{ subject }}</h1>
+                </div>
+                <div class="email-bd">
+                    <p class="email-teaser">{{{ message }}}</p>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</ol>
