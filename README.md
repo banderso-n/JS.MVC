@@ -41,7 +41,8 @@ Image of finished app with link to live demo.
 ### Steps
 
 0. MVC in General
-    0. http://www.smashingmagazine.com/2012/07/27/journey-through-the-javascript-mvc-jungle/
+    0. https://developer.chrome.com/apps/app_frameworks
+    0. http://todomvc.com/ (Vanilla)
     0. Give tldr on what methodology we'll be using
         * Show a typical MVC diagram and explain why it's not helpful
             * Apps rarely ever just have one model, one view, and one controller. How does it work when I have multiple models, maybe even multiple views for a given model, and multiple controllers?
