@@ -42,7 +42,8 @@ define(function (require) {
 
 
     App.prototype.disable = function () {
-
+        this.emailListView.off(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this._onEmailActivation);
+        return this;
     };
 
 
