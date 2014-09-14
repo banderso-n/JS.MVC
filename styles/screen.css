@@ -150,7 +150,10 @@ body {
 /**
  * Definition ## List (.dList)
  */
-.dList {
+.dList:after {
+    clear: left;
+    content: '';
+    display: block;
 }
 
 .dList-term {
@@ -214,6 +217,11 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.email-teaser br {
+    content: ' ';
+    margin-left: 2px;
 }
 
 
