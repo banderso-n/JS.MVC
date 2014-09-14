@@ -173,6 +173,11 @@ body {
     margin-top: 10px;
 }
 
+.copy > p:after {
+    content: ' ';
+    display: table;
+}
+
 .copy > p:first-child {
     margin-top: 0;
 }
@@ -219,9 +224,12 @@ body {
     white-space: nowrap;
 }
 
-.email-teaser br {
-    content: ' ';
-    margin-left: 2px;
+.email-teaser > * {
+    display: inline;
+}
+
+.email-teaser > * + * {
+    margin-left: 4px;
 }
 
 

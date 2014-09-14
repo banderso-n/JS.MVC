@@ -3,7 +3,7 @@
         {
             "from": "bill@bill.com",
             "id": "1",
-            "message": "Hey,<br/><br/>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.<br/><br/>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.<br/><br/>Bill",
+            "message": "<p>Hey,</p><p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p><p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p><p></p><p>Bill</p>",
             "subject": "Hey dude",
             "sent": "2014-09-10T02:15:56.563Z"
         },
