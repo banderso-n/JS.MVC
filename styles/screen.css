@@ -1,6 +1,5 @@
 /**
- * Base Styles
- * ===
+ * # Base Styles
  */
 
 * {
@@ -18,31 +17,73 @@ body {
 
 
 /**
- * Landmarks
- * ===
+ * # Landmarks
  */
 
 /**
- * Main (.main)
+ * ## Main (.main)
  */
 .main {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
     padding: 50px;
 }
 
 
 /**
- * Layout Modules
- * ===
+ * # Layout Modules
  */
 
 /**
- * Table (.table)
- * ---
+ * ## Grid (.grid)
+ */
+.grid {
+    margin-left: -10px;
+}
+
+.grid:after {
+    content: '';
+    display: block;
+}
+
+.mix-grid_fullHeight {
+    height: 100%;
+}
+
+.grid-col {
+    float: left;
+    padding-left: 10px;
+}
+
+.grid-col_1of12 { width: 8.33%; }
+.grid-col_2of12 { width: 16.67%; }
+.grid-col_3of12 { width: 25%; }
+.grid-col_4of12 { width: 33.33%; }
+.grid-col_5of12 { width: 41.67%; }
+.grid-col_6of12 { width: 50%; }
+.grid-col_7of12 { width: 58.33%; }
+.grid-col_8of12 { width: 66.67%; }
+.grid-col_9of12 { width: 75%; }
+.grid-col_10of12 { width: 83.33%; }
+.grid-col_11of12 { width: 91.67%; }
+
+.mix-grid-col_fullHeight {
+    height: 100%;
+}
+
+
+/**
+ * ## Table (.table)
  */
 .table {
     display: table;
     table-layout: fixed;
     width: 100%;
+}
+
+.table_shadowed {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .mix-table_fixed {
@@ -58,20 +99,12 @@ body {
     vertical-align: top;
 }
 
-.table-cell_shadowed {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.mix-table-cell_1of4 {
-    width: 25%;
+.mix-table-cell_fullHeight {
+    height: 100%;
 }
 
 .table-row {
     display: table-row;
-}
-
-.mix-table-row_fillRemaining {
-    height: 100%;
 }
 
 .table-positioner {
@@ -81,16 +114,18 @@ body {
 }
 
 .table-scrollable {
-    height: 100%;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: absolute;
-    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 
 /**
- * Vertical Rhythm (.vr)
- * ---
+ * Vertical ## Rhythm (.vr)
  */
 .vr_1x { margin-bottom: 5px; }
 .vr_2x { margin-bottom: 10px; }
@@ -100,13 +135,11 @@ body {
 
 
 /**
- * Container
- * ===
+ * # Container
  */
 
 /**
- * Vertical List (.vList)
- * ---
+ * Vertical ## List (.vList)
  */
 
 .vList_lined > * + * {
@@ -115,8 +148,7 @@ body {
 
 
 /**
- * Definition List (.dList)
- * ---
+ * Definition ## List (.dList)
  */
 .dList {
 }
@@ -132,8 +164,7 @@ body {
 
 
 /**
- * Copy (.copy)
- * ---
+ * ## Copy (.copy)
  */
 .copy > p {
     margin-top: 10px;
@@ -145,13 +176,11 @@ body {
 
 
 /**
- * Content
- * ===
+ * # Content
  */
 
 /**
- * Email (.email)
- * ---
+ * ## Email (.email)
  */
 .email {
     background-color: transparent;
@@ -189,17 +218,16 @@ body {
 
 
 /**
- * Input (.input)
- * ---
+ * ## Input (.input)
  */
 .input {
     -webkit-appearance: none;
     appearance: none;
+    border: none;
+    border-bottom: 1px solid #cccccc;
     display: block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    border: none;
-    border-bottom: 1px solid #cccccc;
     margin: 0;
     outline: none;
     padding: 10px 5px;
@@ -208,8 +236,7 @@ body {
 
 
 /**
- * Text (.txt)
- * ---
+ * ## Text (.txt)
  */
 .txt_xs { font-size: 12px; }
 .txt_s { font-size: 14px; }
@@ -230,8 +257,7 @@ body {
 
 
 /**
- * Utility Classes
- * ===
+ * # Utility Classes
  */
 
 .isVisuallyHidden {

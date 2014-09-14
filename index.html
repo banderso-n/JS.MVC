@@ -13,68 +13,71 @@
 </head>
 <body>
 
-<div class="table mix-table_fullHeight mix-table_fixed">
-    <div class="js-emailList table-cell table-cell_shadowed mix-table-cell_1of4">
-        <div class="table mix-table_fullHeight">
+<div class="grid mix-grid_fullHeight">
+    <div class="grid-col grid-col_3of12 mix-grid-col_fullHeight">
+        <div class="table table_shadowed mix-table_fullHeight">
             <div class="table-row">
-                <form class="vr_2x">
-                    <label class="isVisuallyHidden">Search your emails</label>
-                    <input type="search" class="input" name="query" placeholder="Search" autocomplete="off" />
-                </form>
+                <div class="table-cell">
+                    <form>
+                        <label class="isVisuallyHidden">Search your emails</label>
+                        <input type="search" class="input" name="query" placeholder="Search" autocomplete="off" />
+                    </form>
+                </div>
             </div>
-            <div class="table-row mix-table-row_fillRemaining">
-                <div class="table-positioner">
-                    <div class="table-scrollable">
-                        <ol class="vList vList_lined">
-                            <li>
-                                <div class="js-emailList-email email">
-                                    <div class="email-hd">
-                                        <h1 class="email-heading">Re: Hello</h1>
-                                    </div>
-                                    <div class="email-bd">
-                                        <p class="email-teaser">Lorem ipsum Amet Duis aliqua incididunt dolor incididunt Ut culpa aliquip amet eiusmod aliqua aliqua irure consectetur proident Duis id ut.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="js-emailList-email email">
-                                    <div class="email-hd">
-                                        <h1 class="email-heading">Tomorrow and tomorrow and tomorrow</h1>
-                                    </div>
-                                    <div class="email-bd">
-                                        <p class="email-teaser">Lorem ipsum Amet Duis aliqua incididunt dolor incididunt Ut culpa aliquip amet eiusmod aliqua aliqua irure consectetur proident Duis id ut.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ol>
+            <div class="table-row">
+                <div class="table-cell mix-table-cell_fullHeight">
+                    <div class="table-positioner">
+                        <div class="table-scrollable">
+                            <div class="vr_2x"></div>
+                            <div class="js-emailList">
+                                <ol class="vList vList_lined">
+                                    <li>
+                                        <div class="js-emailList-email email">
+                                            <div class="email-hd">
+                                                <h1 class="email-heading">Re: Hello</h1>
+                                            </div>
+                                            <div class="email-bd">
+                                                <p class="email-teaser">Lorem ipsum Amet Duis aliqua incididunt dolor incididunt Ut culpa aliquip amet eiusmod aliqua aliqua irure consectetur proident Duis id ut.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="js-emailList-email email">
+                                            <div class="email-hd">
+                                                <h1 class="email-heading">Re: Hello</h1>
+                                            </div>
+                                            <div class="email-bd">
+                                                <p class="email-teaser">Lorem ipsum Amet Duis aliqua incididunt dolor incididunt Ut culpa aliquip amet eiusmod aliqua aliqua irure consectetur proident Duis id ut.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="table-cell">
-        <div class="table-positioner">
-            <div class="table-scrollable">
-                <div class="main">
-                    <div class="vr_2x">
-                        <h1 class="txt_xxl mix-txt_light">Re: Hello</h1>
-                    </div>
-                    <div class="vr_5x">
-                        <dl class="dList mix-txt_grey10of16">
-                            <dt class="dList-term">From:</dt>
-                            <dd class="dList-definition">bill@bill.com</dd>
-                        </dl>
-                    </div>
-                    <div class="copy mix-txt_vr_l">
-                        <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
-                        <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
-                        <br/>
-                        <br/>
-                        Bill
-                    </div>
-                </div>
+    <div class="grid-col grid-col_9of12 mix-grid-col_fullHeight">
+        <section class="main">
+            <div class="vr_2x">
+                <h1 class="txt_xxl mix-txt_light">Re: Hello</h1>
             </div>
-        </div>
+            <div class="vr_5x">
+                <dl class="dList mix-txt_grey10of16">
+                    <dt class="dList-term">From:</dt>
+                    <dd class="dList-definition">bill@bill.com</dd>
+                </dl>
+            </div>
+            <div class="copy mix-txt_vr_l">
+                <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
+                <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
+                <br/>
+                <br/>
+                Bill
+            </div>
+        </section>
     </div>
 </div>
 
