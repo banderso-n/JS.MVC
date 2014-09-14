@@ -1,11 +1,18 @@
 {
     "emails": [
         {
-            "from": "blank",
+            "from": "bill@bill.com",
             "id": "1",
-            "message": "Hello",
-            "subject": "Hello",
-            "sent": "2014-09-11T02:15:56.563Z"
+            "message": "Hey,<br/><br/>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.<br/><br/>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.<br/><br/>Bill",
+            "subject": "Hey dude",
+            "sent": "2014-09-10T02:15:56.563Z"
+        },
+        {
+            "from": "john@john.com",
+            "id": "2",
+            "message": "Did you see that ludicrous display last night?",
+            "subject": "Bro",
+            "sent": "2014-09-10T02:15:56.563Z"
         }
     ]
 }

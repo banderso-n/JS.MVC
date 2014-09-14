@@ -2,6 +2,8 @@ define(function (require) {
     'use strict';
 
     var EventEmitter = require('lib/EventEmitter');
+    var Handlebars = require('Handlebars');
+    var _emailListTemplate = Handlebars.compile(require('text!templates/emailListTemplate.html'));
 
 
     function EmailListView ($element) {
@@ -9,7 +11,7 @@ define(function (require) {
 
         this.$element = $element;
 
-        this.$email = $element.find('.' + EmailListView.CLASS_NAME.EMAIL);
+        this.$email = $();
 
         this.activeIndex = -1;
 
@@ -17,7 +19,6 @@ define(function (require) {
 
         this._onEmailClick = this._onEmailClick.bind(this);
 
-        this.init();
     }
     EmailListView.prototype = Object.create(EventEmitter.prototype);
     EmailListView.prototype.constructor = EmailListView;
@@ -33,12 +34,6 @@ define(function (require) {
     };
 
 
-    EmailListView.prototype.init = function () {
-        this.$email.on('click', this._onEmailClick);
-        return this;
-    };
-
-
     EmailListView.prototype.activateIndex = function (index) {
         var previousIndex = this.activeIndex;
         this.activeIndex = Math.max(0, Math.min(index, this.$email.length - 1));
@@ -47,6 +42,34 @@ define(function (require) {
 
         this.emit(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this.collection.models[this.activeIndex]);
 
+        return this;
+    };
+
+
+    EmailListView.prototype.createChildren = function () {
+        this.$email = this.$element.find('.' + EmailListView.CLASS_NAME.EMAIL);
+        return this;
+    };
+
+
+    EmailListView.prototype.enable = function () {
+        this.$email.on('click', this._onEmailClick);
+        return this;
+    };
+
+
+    EmailListView.prototype.disable = function () {
+        this.$email.off('click', this._onEmailClick);
+        return this;
+    };
+
+
+    EmailListView.prototype.render = function () {
+        var renderedHTML = _emailListTemplate(this);
+        this.$element.empty();
+        this.$element.html(renderedHTML);
+        this.createChildren();
+        this.enable();
         return this;
     };
 

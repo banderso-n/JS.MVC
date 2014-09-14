@@ -29,6 +29,7 @@ define(function (require) {
 
         return this.emailCollection.fetch().done(function () {
             self.emailListView.collection = self.emailCollection;
+            self.emailListView.render();
             self.emailListView.activateIndex(0);
         });
     };

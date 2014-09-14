@@ -2,6 +2,8 @@ define(function (require) {
     'use strict';
 
     var EventEmitter = require('lib/EventEmitter');
+    var Handlebars = require('Handlebars');
+    var _emailDetailTemplate = Handlebars.compile(require('text!templates/emailDetailTemplate.html'));
 
 
     function EmailDetailView ($element) {
@@ -17,7 +19,10 @@ define(function (require) {
 
 
     EmailDetailView.prototype.render = function () {
-
+        var renderedHTML = _emailDetailTemplate(this);
+        this.$element.empty();
+        this.$element.html(renderedHTML);
+        return this;
     };
 
 
