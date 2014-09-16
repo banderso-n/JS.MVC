@@ -7,7 +7,7 @@ The purpose of this tutorial is to provide one example of an MVC setup for a web
 
 ### What we'll be building
 
-Image of finished app with link to live demo.
+[TODO: Image of finished app.](http://banderso-n.github.io/JS.MVC/)
 
 * The left panel will display all emails with some teaser text
 * The right panel will display the detail view (the email in its entirety)
