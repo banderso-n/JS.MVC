@@ -21,5 +21,17 @@ define(function (require) {
     };
 
 
+    EmailCollection.prototype.search = function (term) {
+        var emailCollection_filtered = new EmailCollection();
+        var term_lowerCase = term.toLowerCase();
+        emailCollection_filtered.models = this.models.filter(function (model) {
+            return model.from.toLowerCase().indexOf(term_lowerCase) !== -1 ||
+                model.message.toLowerCase().indexOf(term_lowerCase) !== -1 ||
+                model.subject.toLowerCase().indexOf(term_lowerCase) !== -1;
+        });
+        return emailCollection_filtered;
+    };
+
+
     return EmailCollection;
 });
