@@ -6,6 +6,7 @@ define(function (require) {
     var EmailDetailView = require('views/EmailDetailView');
     var EmailListView = require('views/EmailListView');
     var EmailModel = require('models/EmailModel');
+    var SearchView = require('views/SearchView');
 
 
     function App () {
@@ -16,7 +17,10 @@ define(function (require) {
 
         this.emailListView = new EmailListView($('.js-emailList'));
 
+        this.searchView = new SearchView($('.js-search'));
+
         this._onEmailActivation = this._onEmailActivation.bind(this);
+        this._onSearchTermChange = this._onSearchTermChange.bind(this);
 
         this.init();
     }
@@ -37,12 +41,14 @@ define(function (require) {
 
     App.prototype.enable = function () {
         this.emailListView.on(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this._onEmailActivation);
+        this.searchView.on(SearchView.EVENT_NAME.TERM_CHANGE, this._onSearchTermChange);
         return this;
     };
 
 
     App.prototype.disable = function () {
         this.emailListView.off(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this._onEmailActivation);
+        this.searchView.off(SearchView.EVENT_NAME.TERM_CHANGE, this._onSearchTermChange);
         return this;
     };
 
@@ -50,6 +56,12 @@ define(function (require) {
     App.prototype._onEmailActivation = function (emailModel) {
         this.emailDetailView.model = emailModel;
         this.emailDetailView.render();
+    };
+
+
+    App.prototype._onSearchTermChange = function (term) {
+        this.emailListView.collection = term === '' ? this.emailCollection : this.emailCollection.search(term);
+        this.emailListView.render();
     };
 
 
