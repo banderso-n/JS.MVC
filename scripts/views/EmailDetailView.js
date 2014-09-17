@@ -1,27 +1,28 @@
 define(function (require) {
     'use strict';
 
-    var EventEmitter = require('lib/EventEmitter');
-    var Handlebars = require('Handlebars');
-    var _emailDetailTemplate = Handlebars.compile(require('text!templates/emailDetailTemplate.html'));
-
 
     function EmailDetailView ($element) {
-        EventEmitter.call(this);
 
         this.$element = $element;
 
-        this.model;
+        this.$email = $element.find('.' + EmailDetailView.CLASS_NAME.EMAIL);
 
     }
-    EmailDetailView.prototype = Object.create(EventEmitter.prototype);
-    EmailDetailView.prototype.constructor = EmailDetailView;
 
 
-    EmailDetailView.prototype.render = function () {
-        var renderedHTML = _emailDetailTemplate(this);
-        this.$element.empty();
-        this.$element.html(renderedHTML);
+    EmailDetailView.CLASS_NAME = {
+        EMAIL:      'js-emailDetail-email',
+        IS_HIDDEN:  'isVisuallyHidden'
+    };
+
+    EmailDetailView.DATA_ATTRIBUTE = {
+        ID: 'emaildetail-id'
+    };
+
+
+    EmailDetailView.prototype.activateId = function (id) {
+
         return this;
     };
 

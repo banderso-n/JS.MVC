@@ -1,27 +1,17 @@
 define(function (require) {
     'use strict';
 
-    var EventEmitter = require('lib/EventEmitter');
-    var Handlebars = require('Handlebars');
-    var _emailListTemplate = Handlebars.compile(require('text!templates/emailListTemplate.html'));
-
 
     function EmailListView ($element) {
-        EventEmitter.call(this);
 
         this.$element = $element;
 
-        this.$email = $();
-
-        this.activeIndex = -1;
-
-        this.collection;
+        this.$email = this.$element.find('.' + EmailListView.CLASS_NAME.EMAIL);
 
         this._onEmailClick = this._onEmailClick.bind(this);
 
+        this.init();
     }
-    EmailListView.prototype = Object.create(EventEmitter.prototype);
-    EmailListView.prototype.constructor = EmailListView;
 
 
     EmailListView.CLASS_NAME = {
@@ -29,54 +19,28 @@ define(function (require) {
         EMAIL_IS_ACTIVE:    'email_isActive'
     };
 
-    EmailListView.EVENT_NAME = {
-        EMAIL_ACTIVATION: 'emailList:emailActivation'
+    EmailListView.DATA_ATTRIBUTE = {
+        ID: 'emaillist-id'
     };
 
 
-    EmailListView.prototype.activateIndex = function (index) {
-        var previousIndex = this.activeIndex;
-        this.activeIndex = Math.max(0, Math.min(index, this.$email.length - 1));
-        this.$email.eq(previousIndex).removeClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
-        this.$email.eq(this.activeIndex).addClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
-
-        this.emit(EmailListView.EVENT_NAME.EMAIL_ACTIVATION, this.collection.models[this.activeIndex]);
-
-        return this;
-    };
-
-
-    EmailListView.prototype.createChildren = function () {
-        this.$email = this.$element.find('.' + EmailListView.CLASS_NAME.EMAIL);
-        return this;
-    };
-
-
-    EmailListView.prototype.enable = function () {
+    EmailListView.prototype.init = function () {
         this.$email.on('click', this._onEmailClick);
         return this;
     };
 
 
-    EmailListView.prototype.disable = function () {
-        this.$email.off('click', this._onEmailClick);
-        return this;
-    };
+    EmailListView.prototype.activateId = function (id) {
+        this.$email.eq(previousIndex).removeClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
+        this.$email.eq(this.activeIndex).addClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
 
-
-    EmailListView.prototype.render = function () {
-        var renderedHTML = _emailListTemplate(this);
-        this.$element.empty();
-        this.$element.html(renderedHTML);
-        this.createChildren();
-        this.enable();
         return this;
     };
 
 
     EmailListView.prototype._onEmailClick = function (e) {
-        var clickedIndex = this.$email.index(e.currentTarget);
-        this.activateIndex(clickedIndex);
+        var clickedId = this.$email.index(e.currentTarget); // TODO: Get clickedId
+        this.activateId(clickedId);
     };
 
 
