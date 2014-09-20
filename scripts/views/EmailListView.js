@@ -26,6 +26,7 @@ define(function (require) {
 
     EmailListView.prototype.init = function () {
         this.$email.on('click', this._onEmailClick);
+        this.activateId(this.$email.eq(0).data(EmailListView.DATA_ATTRIBUTE.ID));
         return this;
     };
 
