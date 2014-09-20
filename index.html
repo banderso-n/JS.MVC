@@ -9,37 +9,143 @@
 
     <!-- Scripts -->
     <script src="scripts/lib/require.js"></script>
-    <script src="scripts/config.js"></script>
 </head>
 <body>
 
 <div class="grid mix-grid_fullHeight">
-    <div class="grid-col grid-col_3of12 mix-grid-col_fullHeight">
-        <div class="table table_shadowed mix-table_fullHeight">
-            <div class="table-row">
-                <div class="table-cell">
-                    <form>
-                        <label class="isVisuallyHidden">Search your emails</label>
-                        <input type="search" class="js-search input" name="query" placeholder="Search" autocomplete="off" />
-                    </form>
-                </div>
-            </div>
-            <div class="table-row">
-                <div class="table-cell mix-table-cell_fullHeight">
-                    <div class="table-positioner">
-                        <div class="table-scrollable">
-                            <div class="vr_2x"></div>
-                            <div class="js-emailList">
+    <div class="grid-col grid-col_3of12 mix-grid-col_fullHeight mix-grid-col_shadowed">
+
+        <!-- Begin Email List View -->
+        <div class="js-emailList">
+            <ol class="vList vList_lined">
+                <li>
+                    <div class="js-emailList-email email" data-emaillist-id="j0mci">
+                        <div class="email-hd">
+                            <h2 class="email-heading">Lorem Ipsum?</h2>
+                        </div>
+                        <div class="email-bd">
+                            <div class="email-teaser">
+                                <p>Hey,</p>
+                                <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
+                                <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
+                                <p></p>
+                                <p>Lawrence</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <div class="js-emailList-email email" data-emaillist-id="dj02k">
+                        <div class="email-hd">
+                            <h2 class="email-heading">Re: Tomorrow</h2>
+                        </div>
+                        <div class="email-bd">
+                            <div class="email-teaser">
+                                <p>Hey,</p>
+                                <p>
+                                    To-morrow, and to-morrow, and to-morrow,
+                                    Creeps in this petty pace from day to day,
+                                    To the last syllable of recorded time;
+                                    And all our yesterdays have lighted fools
+                                    The way to dusty death. Out, out, brief candle!
+                                    Life's but a walking shadow, a poor player
+                                    That struts and frets his hour upon the stage
+                                    And then is heard no more. It is a tale
+                                    Told by an idiot, full of sound and fury
+                                    Signifying nothing.</p>
+                                <p></p>
+                                <p>Bill</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="js-emailList-email email" data-emaillist-id="7ead0">
+                        <div class="email-hd">
+                            <h2 class="email-heading">Nickelback</h2>
+                        </div>
+                        <div class="email-bd">
+                            <div class="email-teaser">
+                                <p>I'm so excited to see Nickelback!?</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
         </div>
+        <!-- End Email List View -->
+
     </div>
     <div class="grid-col grid-col_9of12 mix-grid-col_fullHeight">
+
+        <!-- Begin Email Detail View -->
         <section class="main js-emailDetail">
+
+            <ol>
+                <li class="js-emailDetail-email isVisuallyHidden" data-emaildetail-id="j0mci">
+                    <div class="vr_2x">
+                        <h2 class="txt_xxl mix-txt_light">Lorem Ipsum?</h2>
+                    </div>
+                    <div class="vr_5x">
+                        <dl class="dList mix-txt_grey10of16">
+                            <dt class="dList-term">From:</dt>
+                            <dd class="dList-definition">lawrence@ipsum.com</dd>
+                        </dl>
+                    </div>
+                    <div class="copy mix-txt_vr_l">
+                        <p>Hey,</p>
+                        <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
+                        <p>Lorem ipsum Officia Ut non ea nostrud voluptate consectetur eiusmod dolore adipisicing non velit adipisicing ea id ea voluptate aliqua irure mollit qui culpa occaecat sint nulla ut ad sit Excepteur amet ad id voluptate commodo consectetur ut sunt est.</p>
+                        <p></p>
+                        <p>Lawrence</p>
+                    </div>
+                </li>
+                <li class="js-emailDetail-email isVisuallyHidden" data-emaildetail-id="dj02k">
+                    <div class="vr_2x">
+                        <h2 class="txt_xxl mix-txt_light">Re: Tomorrow</h2>
+                    </div>
+                    <div class="vr_5x">
+                        <dl class="dList mix-txt_grey10of16">
+                            <dt class="dList-term">From:</dt>
+                            <dd class="dList-definition">bigwilliestyle@hundreddollawilliam.com</dd>
+                        </dl>
+                    </div>
+                    <div class="copy mix-txt_vr_l">
+                        <p>Hey,</p>
+                        <p>
+                            To-morrow, and to-morrow, and to-morrow,
+                            Creeps in this petty pace from day to day,
+                            To the last syllable of recorded time;
+                            And all our yesterdays have lighted fools
+                            The way to dusty death. Out, out, brief candle!
+                            Life's but a walking shadow, a poor player
+                            That struts and frets his hour upon the stage
+                            And then is heard no more. It is a tale
+                            Told by an idiot, full of sound and fury
+                            Signifying nothing ;)</p>
+                        <p></p>
+                        <p>-B</p>
+                    </div>
+                </li>
+                <li class="js-emailDetail-email isVisuallyHidden" data-emaildetail-id="7ead0">
+                    <div class="vr_2x">
+                        <h2 class="txt_xxl mix-txt_light">Nickelback</h2>
+                    </div>
+                    <div class="vr_5x">
+                        <dl class="dList mix-txt_grey10of16">
+                            <dt class="dList-term">From:</dt>
+                            <dd class="dList-definition">nickelbackfan@nickelbackfanclub.com</dd>
+                        </dl>
+                    </div>
+                    <div class="copy mix-txt_vr_l">
+                        <p>I'm so excited to see Nickelback!?</p>
+                    </div>
+                </li>
+            </ol>
+
         </section>
+        <!-- End Email Detail View -->
+
     </div>
 </div>
 

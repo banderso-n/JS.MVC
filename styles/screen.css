@@ -24,9 +24,6 @@ body {
  * ## Main (.main)
  */
 .main {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
     padding: 50px;
 }
 
@@ -70,57 +67,12 @@ body {
 
 .mix-grid-col_fullHeight {
     height: 100%;
-}
-
-
-/**
- * ## Table (.table)
- */
-.table {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-}
-
-.table_shadowed {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.mix-table_fixed {
-    table-layout: fixed;
-}
-
-.mix-table_fullHeight {
-    height: 100%;
-}
-
-.table-cell {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.mix-table-cell_fullHeight {
-    height: 100%;
-}
-
-.table-row {
-    display: table-row;
-}
-
-.table-positioner {
-    height: 100%;
-    position: relative;
-    width: 100%;
-}
-
-.table-scrollable {
     overflow-x: hidden;
     overflow-y: scroll;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+}
+
+.mix-grid-col_shadowed {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -230,24 +182,6 @@ body {
 
 .email-teaser > * + * {
     margin-left: 4px;
-}
-
-
-/**
- * ## Input (.input)
- */
-.input {
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    border-bottom: 1px solid #cccccc;
-    display: block;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    outline: none;
-    padding: 10px 5px;
-    width: 100%;
 }
 
 
