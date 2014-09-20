@@ -12,13 +12,20 @@ define(function (require) {
 
         this.emailListView = new EmailListView($('.js-emailList'));
 
+        this._onEmailListChange = this._onEmailListChange.bind(this);
+
         this.init();
     }
 
 
     App.prototype.init = function () {
-
+        this.emailListView.$element.on(EmailListView.EVENT_NAME.CHANGE, this._onEmailListChange);
         return this;
+    };
+
+
+    App.prototype._onEmailListChange = function (e, data) {
+        this.emailDetailView.activateId(data.id);
     };
 
 

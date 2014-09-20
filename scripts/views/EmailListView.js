@@ -23,6 +23,10 @@ define(function (require) {
         ID: 'emaillist-id'
     };
 
+    EmailListView.EVENT_NAME = {
+        CHANGE: 'emailList:change'
+    };
+
 
     EmailListView.prototype.init = function () {
         this.$email.on('click', this._onEmailClick);
@@ -33,6 +37,7 @@ define(function (require) {
     EmailListView.prototype.activateId = function (id) {
         this.$email.removeClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
         this.$email.filter('[data-' + EmailListView.DATA_ATTRIBUTE.ID + '="' + id + '"]').addClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
+        this.$element.trigger(EmailListView.EVENT_NAME.CHANGE, { id: id });
         return this;
     };
 
