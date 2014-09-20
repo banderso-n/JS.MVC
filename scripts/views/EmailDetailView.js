@@ -22,7 +22,8 @@ define(function (require) {
 
 
     EmailDetailView.prototype.activateId = function (id) {
-
+        this.$email.addClass(EmailDetailView.CLASS_NAME.IS_HIDDEN);
+        this.$email.filter('[data-' + EmailDetailView.DATA_ATTRIBUTE.ID + '="' + id + '"]').removeClass(EmailDetailView.CLASS_NAME.IS_HIDDEN);
         return this;
     };
 

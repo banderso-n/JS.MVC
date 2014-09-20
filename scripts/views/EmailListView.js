@@ -31,15 +31,14 @@ define(function (require) {
 
 
     EmailListView.prototype.activateId = function (id) {
-        this.$email.eq(previousIndex).removeClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
-        this.$email.eq(this.activeIndex).addClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
-
+        this.$email.removeClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
+        this.$email.filter('[data-' + EmailListView.DATA_ATTRIBUTE.ID + '="' + id + '"]').addClass(EmailListView.CLASS_NAME.EMAIL_IS_ACTIVE);
         return this;
     };
 
 
     EmailListView.prototype._onEmailClick = function (e) {
-        var clickedId = this.$email.index(e.currentTarget); // TODO: Get clickedId
+        var clickedId = $(e.currentTarget).data(EmailListView.DATA_ATTRIBUTE.ID);
         this.activateId(clickedId);
     };
 
